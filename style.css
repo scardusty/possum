@@ -1,0 +1,395 @@
+:root { /*colors*/
+    --y1: #C1993F; /* rgba(193,153, 63,1) */
+    --y2: #E3BF70; /* rgba(227,191,112,1) */
+    --y3: #FFF0CF; /* rgba(255,240,207,1) */
+    --y4: #BCAD8C; /* rgba(188,173,140,1) */
+    --y5: #9A8D72; /* rgba(154,141,114,1) */
+    
+    --t1: #286D76; /* rgba( 40,109,118,1) */
+    --t2: #46838B; /* rgba( 70,131,139,1) */
+    --t3: #829C9F; /* rgba(130,156,159,1) */
+    --t4: #566F73; /* rgba( 86,111,115,1) */
+    --t5: #465B5E; /* rgba( 70, 91, 94,1) */
+    
+    --o1: #C17E3F; /* rgba(193,126, 63,1) */
+    --o2: #E3A770; /* rgba(227,167,112,1) */
+    --o3: #FFE6CF; /* rgba(255,230,207,1) */
+    --o4: #BCA38C; /* rgba(188,163,140,1) */
+    --o5: #9A8572; /* rgba(154,133,114,1) */
+    
+    --b1: #354783; /* rgba( 53, 71,131,1) */
+    --b2: #55659A; /* rgba( 85,101,154,1) */
+    --b3: #9299AF; /* rgba(146,153,175,1) */
+    --b4: #62697F; /* rgba( 98,105,127,1) */
+    --b5: #505668; /* rgba( 80, 86,104,1) */
+}
+
+body {
+    background-image:url("images/concrete-wall-2.png");
+    background-color:var(--o3);
+    font-family:"Karla", Tahoma, sans-serif;
+    color: var(--b5);
+    font-size:16px;
+}
+
+#wrapper {
+    max-width:1000px;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    grid-gap: 10px;
+}
+
+header, nav, footer, main, div, section, p, blockquote, figure, figcaption, h1, h2, h3, h4, h5, #wrapper, ul, li, figure::after {
+    box-sizing:border-box;
+}
+/*
+header, nav, footer, main {
+    border: 3px #fff solid;
+}*/
+
+header {
+    flex:2 1 100%;
+    text-align: center;
+}
+
+#tagline {
+    background:var(--o4);
+    color:var(--y3);
+    padding:5px;
+    margin:0 -15px;
+    width:calc(100% + 30px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size:0.8rem;
+    border-top:10px transparent solid;
+    border-bottom:10px transparent solid;
+    border-left:var(--o5) solid 10px;
+    border-right:var(--o5) solid 10px;
+    background-clip: padding-box;
+    border-radius:20px;
+    opacity:0.85;
+}
+
+nav {
+    flex:1 1 25%;
+    min-width:215px;
+    background:var(--y3);
+    box-shadow:1px 1px 2px var(--o4);
+    border-radius:18px;
+    display:inline-block;
+    align-self: baseline;
+}
+
+nav h2 {
+    font-size:1.7rem;
+    text-align:center;
+    color:var(--t3);
+}
+
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+nav ul li {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+nav ul li:first-of-type a {
+    margin-top:6px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top:none;
+    padding-top:13px;
+}
+
+
+nav ul li:last-of-type a{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom:none;
+    margin-bottom:6px;
+    padding-bottom:13px;
+}
+
+nav ul li a::before {
+    font-size:0.9rem;
+    font-style:normal;
+    display:inline-block;
+    position:absolute;
+    top:12px;
+    left:13px;
+    content: "\2731";
+    color:var(--y2);
+    transition:color 0.5s;
+    /*transition:text-shadow 0.6s;*/
+}
+
+nav ul li a:hover::before {
+    color:var(--y3);
+    /*text-shadow:var(--o2) -1px 0px 0px;*/
+}
+
+nav ul li:first-of-type a::before {
+    top:15px;
+}
+
+nav ul li a {
+    letter-spacing:1px;
+    text-transform: uppercase;
+    border-right:3px solid transparent;
+    border-left:3px solid transparent;
+    border-top:solid 5px var(--b1);
+    border-bottom:solid 5px var(--b3);
+    margin: 6px 3px;
+    text-decoration:none;
+    color:var(--o3);
+    font-weight:700;
+    position:relative;
+    padding:10px 0px 10px 35px;
+    display:block;
+    background: var(--b2)/*linear-gradient(51deg, rgba(85,101,154,1) 0%, rgba(85,101,154,1) 100%)*/;
+    transition:0.5s background, 0.5s color, 0.5s border-color;
+    background-clip:padding-box;
+}
+    
+nav ul li a:hover {
+    background:var(--t2);
+    border-bottom-color:var(--t3);
+    border-top-color:var(--t1);
+    color:#fff;
+    box-shadow:var(--t1) 0px 0px 4px inset;
+    background-clip:padding-box;
+}
+
+a.current {
+    color:#fff;
+}
+    
+main {
+    flex:1 1 70%;
+    height:100%;
+}
+
+footer {
+    flex:2 1 100%;
+}
+    
+
+h1, h2, h3, h4, h5 {
+    font-family:"Love Ya Like a Sister", "Karla", Arial, sans-serif;
+}
+
+h1 {
+    color:rgba( 53, 71,131,0.85);
+    font-size:3.5rem;
+    text-shadow:#fff 0px 0px 3px,#fff 0px 0px 4px;
+    margin:15px 10px 10px 10px;
+}
+
+h1 a {
+    color:inherit;
+    text-decoration:none;
+    transition:color 0.2s;
+}
+
+h1 a:hover {
+    color:var(--b1);
+    text-shadow:#fff 0px 0px 3px, #fff 0px 0px 2px, #fff 0px 0px 1px, #fff 0px 0px 0px;
+}
+
+h2 {
+    font-size:2rem;
+    letter-spacing:1px;
+    color:var(--y2);
+    margin:10px;
+    padding:0;
+    text-align:left;
+}
+
+h3 {
+    text-align: center;
+    font-size:1.5rem;
+    color:var(--t2);
+    letter-spacing:3px;
+    text-transform: uppercase;
+    margin:5px;
+    padding:0;
+}
+
+h3::before {
+    content: "- - ";
+}
+
+h3::After {
+    content: " - -";
+}
+
+main {
+    margin:0 auto;
+}
+
+
+section {
+    box-sizing: border-box;
+    border-radius:18px;
+    border:var(--y3) solid 6px;
+    padding:10px 20px;
+    background-color:#fff;
+    box-shadow:1px 1px 2px var(--o4);
+    margin-bottom:10px;
+}
+
+section:last-of-type {
+    margin-bottom:0;
+}
+
+footer {
+    background:var(--o4);
+    color:var(--y3);
+    padding:5px;
+    margin:0 -15px;
+    width:calc(100% + 30px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size:0.8rem;
+    border-top:10px transparent solid;
+    border-bottom:10px transparent solid;
+    border-left:var(--o5) solid 10px;
+    border-right:var(--o5) solid 10px;
+    background-clip: padding-box;
+    border-radius:50px;
+    opacity:0.85;
+}
+
+small {
+    opacity:0.7;
+}
+
+ #gallery {
+     display:flex;
+     flex-direction:row;
+     flex-wrap:wrap;
+     align-items: center;
+     justify-items: center;
+}
+
+figure {
+    flex:0 0 auto;
+    padding:0;
+    margin:10px auto;
+    position:relative;
+    display:inline-block;
+    height:fit-content;
+}
+
+.right {
+    float:right;
+}
+
+figure.right {
+    margin-left:15px;
+}
+
+figure.left {
+    margin-right:15px;
+}
+
+.left {
+    float:left;
+}
+
+.clear {
+    clear:both;
+}
+
+figure::after {
+    content: " ";
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    box-shadow:rgba(50,50,50,0.4) 0px 0px 10px inset, 0px 0px 2px #888;
+    border:#fefefe solid 7px;
+    z-index:3;
+    transition:box-shadow 0.7s;
+}
+
+figure:hover::after {
+    box-shadow:rgba(50,50,50,0.7) 0px 0px 10px inset, 0px 0px 4px #999;
+}
+
+img.p300 {
+    width:300px;
+    max-height:300px;
+    object-fit:cover;
+    height:auto;
+    display:block;
+}
+
+#calc {
+    text-align:center;
+}
+
+.result {
+    display:block;
+    padding:10px;
+    font-size:1.5rem;
+    color:var(--o2);
+    font-weight:bold;
+}
+
+label{
+    display:inline-block;
+    width:250px;
+}
+
+input {
+    display:block;
+    margin:5px auto 10px auto;
+}
+
+input[type="text"] {
+    width:200px;
+}
+
+.inline input {
+    display:inline-block;
+    margin:5px;
+}
+
+#randomPossum {
+    width:300px;
+    box-sizing:border-box;
+    height:auto;
+    margin:20px auto;
+}
+
+input[type="button"] {
+    border: var(--o3) 2px solid;
+    border-radius:30px;
+    padding:10px 15px;
+    background-color:var(--y3);
+    color:var(--b2);
+    font-family: "Love Ya Like a Sister", "Karla", Tahoma, sans-serif;
+    font-size:1.2rem;
+    box-shadow:-7px -7px 10px 3px var(--o3) inset;
+}
+
+input[type="button"]:hover {
+    cursor:pointer;
+    box-shadow:-3px -3px 18px 0px var(--o2) inset, 7px 7px 10px 3px var(--y3) inset;
+    color:var(--b1);
+}
+
+#refresh {
+    display:none;
+}
